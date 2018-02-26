@@ -35,7 +35,7 @@ default_post_title: Untitled
 
 # social
 social:
-  github: https://github.com/GallenHu
+  github: https://github.com/wangbinyq
   # weibo: http://weibo.com/10010800
   # mail: mailto:gallenhu@foxmail.com
   # twitter: https://twitter.com/GallenHu
@@ -43,8 +43,7 @@ social:
 # widget
 #   title: 标题
 #   content: 内容
-widget:
-  title: About
-  content: <ul><li><a href="https://github.com/GallenHu/hexo-theme-Daily">如何自定义这里的内容(配置教程)?</a></li></ul>
 
 footer: Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> with Theme <a href="https://github.com/GallenHu/hexo-theme-Daily" target="_blank">Daily</a>
+
+google_analytics: UA-114732129-1
