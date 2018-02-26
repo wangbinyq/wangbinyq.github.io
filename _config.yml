@@ -82,3 +82,6 @@ deploy:
   branch: master
 
 google_analytics: UA-114732129-1
+
+# disqus
+disqus_shortname: wangb

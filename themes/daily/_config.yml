@@ -6,10 +6,7 @@ favicon: images/favicon.png
 # avatar: images/avatar.png
 # banner_small: images/banner-small.png
 # banner_large: images/banner-large.png
-logo: images/logo.png
-
-# disqus
-#disqus_shortname: drakeleung
+logo: /images/logo.png
 
 highlight:
   enable: true
