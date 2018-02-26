@@ -19,9 +19,9 @@ highlight:
 
 # nav #
 nav:
-  wangb: .
-  archive: archives
-  about: about
+  Home: .
+  Archive: archives
+  # About: about
   # rss: atom.xml
 
 # hexo-renderer-sass
