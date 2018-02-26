@@ -1,0 +1,20 @@
+menu:
+    Blog: /
+    Archive: /archives/
+    GitHub: https://github.com/wangbinyq
+    Rss: /atom.xml
+
+favicon: /favicon.png
+logo: /logo.png
+
+# Comment
+# e.g disqus: seansun
+disqus: wangb
+duoshuo:
+
+# Analytics
+# google-analytics:
+ga: UA-114732129-1
+
+# Copyright Infomation
+startyear: 2018

@@ -72,7 +72,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: daily
+theme: apollo
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -80,8 +80,4 @@ deploy:
   type: git
   repo: git@github.com:wangbinyq/wangbinyq.github.io.git
   branch: master
-
-google_analytics: UA-114732129-1
-
-# disqus
-disqus_shortname: wangb
+  
