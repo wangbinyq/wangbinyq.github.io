@@ -81,3 +81,6 @@ deploy:
   repo: git@github.com:wangbinyq/wangbinyq.github.io.git
   branch: master
   
+toc:
+  maxDepth: 2
+  class: toc
