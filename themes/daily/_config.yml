@@ -44,6 +44,8 @@ social:
 #   title: 标题
 #   content: 内容
 
-footer: Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> with Theme <a href="https://github.com/GallenHu/hexo-theme-Daily" target="_blank">Daily</a>
+widget:
+  title: About
+  content: <ul> This is <a href="/">wangb's</a> blog. </ul>
 
-google_analytics: UA-114732129-1
+footer: Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> with Theme <a href="https://github.com/GallenHu/hexo-theme-Daily" target="_blank">Daily</a>
