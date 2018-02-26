@@ -19,9 +19,9 @@ highlight:
 
 # nav #
 nav:
-  home: .
+  wangb: .
   archive: archives
-  # about: about
+  about: about
   # rss: atom.xml
 
 # hexo-renderer-sass
@@ -36,9 +36,8 @@ default_post_title: Untitled
 # social
 social:
   github: https://github.com/wangbinyq
-  # weibo: http://weibo.com/10010800
-  # mail: mailto:gallenhu@foxmail.com
-  # twitter: https://twitter.com/GallenHu
+  so: https://stackoverflow.com/users/2756930/whbb
+  quora: https://www.quora.com/profile/Wang-Bin-18
 
 # widget
 #   title: 标题
