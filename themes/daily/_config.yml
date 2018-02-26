@@ -1,12 +1,12 @@
 # basic
 title: Daily
 subtitle: Minimalism, simplicity and refined details
-favicon: https://hexo.io/icon/favicon-96x96.png
+favicon: images/favicon.png
 
 # avatar: images/avatar.png
 # banner_small: images/banner-small.png
 # banner_large: images/banner-large.png
-logo: https://hexo.io/logo.svg
+logo: images/logo.png
 
 # disqus
 #disqus_shortname: drakeleung
@@ -45,6 +45,6 @@ social:
 
 widget:
   title: About
-  content: <ul> This is <a href="/">wangb's</a> blog. </ul>
+  content: <ul> What i cannot create it, </br> i do not understand. </ul>
 
 footer: Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> with Theme <a href="https://github.com/GallenHu/hexo-theme-Daily" target="_blank">Daily</a>
