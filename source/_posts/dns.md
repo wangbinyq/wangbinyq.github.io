@@ -1,8 +1,9 @@
 ---
 title: DNS 解析详解
-tags:
-  Networkfdf
+tags: Networkfdf
+date: 2018-02-28 16:36:20
 ---
+
 
 大家都知道 DNS (Domain Name System, 域名系统), 是一个域名和 IP 地址映射系统. 通过 DNS 我们可以根据比较容易记住的域名而不是数字 IP 地址来访问网络资源.
 本文主要使用 `dig` (ubuntu 上可以通过 `sudo apt install dnsutils` 安装) 工具来了解 DNS 的各方面.
