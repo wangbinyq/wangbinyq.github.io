@@ -7,7 +7,7 @@ title: wangb's blog
 subtitle:
 description:
 author: wangb
-language: en
+language:
 timezone:
 
 # URL
@@ -85,3 +85,5 @@ toc:
   maxDepth: 2
   class: toc
   
+marked:
+  autolink: true
