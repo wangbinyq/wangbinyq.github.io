@@ -47,4 +47,6 @@ tags: computation
 ## context-free languages
 
 - formal definition of a context-free grammar $(V, \Sigma, R, S)$
-- pushdown automata
+- pushdown automata (PDA)
+  - NFA + stack is equivalent to context-free grammar
+  - not DFA + stack
