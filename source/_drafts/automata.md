@@ -50,3 +50,13 @@ tags: computation
 - pushdown automata (PDA)
   - NFA + stack is equivalent to context-free grammar
   - not DFA + stack
+
+## The Church-Turing Thesis
+
+- turing machine: infinite tape, read/write head
+- formal definition: $\delta \Rightarrow Q \times \Gamma \longrightarrow Q \times \Gamma \times {L, R}$
+  - machine is in state `q` and head is `a`
+  - if $\delta(q,a) = (r, b, L)$
+  - machine write `b` replace `a`, and go to state `r`
+  - `L or R` indicates the head is direction after write
+- language is Turing-decidable (or decidable) if some Turing machine decides it. never loop
