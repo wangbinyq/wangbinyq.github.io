@@ -60,3 +60,24 @@ tags: computation
   - machine write `b` replace `a`, and go to state `r`
   - `L or R` indicates the head is direction after write
 - language is Turing-decidable (or decidable) if some Turing machine decides it. never loop
+- language is Turing-recognizable if some Turing machine recognizes it. may loop
+- variants:
+  - multitape turing machine
+  - NTM
+  - enumerator
+
+## definition of algorithm
+
+- thne 10th hilbert's problem: whether a polynomial has an integral root. There is no such algorithm.
+- $D = {p | p \ is \ a \ polynomial \ with \ an \ integral \ root}$, whether the set `D` is decidable.
+- A Turing Machine is a precise model for the definition of algorithm.
+
+## Time Complexity
+
+## Class P
+- polynomial and exponential time: deterministic, non-deterministic
+
+## Class NP
+- NP is the class of languages that are solvable in polynomial
+time on a nondeterministic Turing machine
+- np-completeness
