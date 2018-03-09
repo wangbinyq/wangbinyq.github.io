@@ -22,6 +22,8 @@ around the mouth, not touching other parts of the vocal tract
 - Tense and lax vowels
 - Simple vowels, glided vowels, and diphthongs
 
+- 
+
 ## 引用
 
 - https://www.fluentu.com/blog/english/english-vowels/

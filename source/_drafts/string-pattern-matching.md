@@ -18,6 +18,10 @@ tags:
 - $\epsilon$-transition
 - active state
 
+- prefix searching
+- suffix searching
+- factor searching
+
 - [Flexible Pattern Matching in Strings
 ](https://book.douban.com/subject/3924688/)
 - algorithms on string,trees and sequence
