@@ -20,3 +20,16 @@ tags:
 8. *German Rolf Buchholz* is the man with the most piercings, he's got 453
 9. A *satellite that* was carried to space *aboard the shuttle Discover* 20 years ago is about to fall to earth, but nobody knowns where the debris will hit.
 10. It's a lofty, probably impossible goal
+
+## 3-10
+11. New York swept the *Tamper Bay Rays* by a identical 4-2 scores in a day-night doubleheader Wednesday
+12. Jim Henson creator of the Muppets from *kermit the Frog to Sesame* Street - is born in *Greenville Mississippi*
+13. Asian tiger mosquitoes are native to the tropics of Southeast Asian, but in the past few years they've spread all across the southeastern of all United States.
+14. Cats *reputedly* have nine lives, and he clearly want*ed* to spend at least one of them here in New York city.
+15. The *frantic pacing  -- scene changes* every eleven seconds on average -- often leaves kids zoned out and *spun up* and unable to *concentrate*.
+    - `up` after a verb is for intensify
+16. *Battered, soaked and flooded*, the Philippines is being hit by its second typhoon in a week.
+17. A few years ago they were thought to be useless, *past* their prime not now.
+18. If you are breathing, it is not too late get up and get goning.
+    - `it is` for emphasize 
+19. A 67 years old grandpa had been found alive after stund be six days under the bottom of overriven.
