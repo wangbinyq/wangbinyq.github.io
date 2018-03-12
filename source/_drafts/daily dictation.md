@@ -32,4 +32,9 @@ tags:
 17. A few years ago they were thought to be useless, *past* their prime not now.
 18. If you are breathing, it is not too late get up and get goning.
     - `it is` for emphasize 
-19. A 67 years old grandpa had been found alive after stund be six days under the bottom of overriven.
+19. A 67-year-old grandpa has been found alive after being stuck for six days at the bottom of a ravine.
+
+## 3-11
+20. Saturday, an ultralight plane crashed into a ferris wheel at a rural festival in Australia, yet somehow no one on the amusement ride nor the plane was hurt.
+21. Heidi won the world over with her forever cute but slightly confused look.
+22. 
