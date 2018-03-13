@@ -45,4 +45,6 @@ tags:
 25. They searched for the missing through out the night under generator-powered flood lights, as family members waited by the mounds of debris, some in tears.
 
 ## 3-13
-26. It's a kind of thing you look forward to instead of you known some more con do it and you think it does work and this is just fun.
+26. It's a kind of thing you look forward to instead of, you known, some *workouts you dread* and you think *of* it *as* work and this is just fun.
+27. Superhero costumes as usual, are big this year, especially form recent movies like Thor and the Green Lantern. 
+28. 
