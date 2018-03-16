@@ -37,4 +37,14 @@ tags:
 ## 3-11
 20. Saturday, an ultralight plane crashed into a ferris wheel at a rural festival in Australia, yet somehow no one on the amusement ride nor the plane was hurt.
 21. Heidi won the world over with her forever cute but slightly confused look.
-22. 
+22. The project *to put them* online *is expected to* be completed by 2016.
+
+## 3-12
+23. An *alleged* SAT cheating scandal have been uncovered *at a* prestigious Long Island high school, This college student is *accused of* taking the college entrance exam for at least 6 students.
+24. St. Louis take the *World* series open*er* on a *cool* night, It was 49 degrees *at the start of* the game.
+25. They searched for the missing through out the night under generator-powered flood lights, as family members waited by the mounds of debris, some in tears.
+
+## 3-13
+26. It's a kind of thing you look forward to instead of, you known, some *workouts you dread* and you think *of* it *as* work and this is just fun.
+27. Superhero costumes as usual, are big this year, especially form recent movies like Thor and the Green Lantern. 
+28. 
