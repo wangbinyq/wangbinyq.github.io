@@ -1,10 +1,9 @@
 ---
-title: Deep Into vue-router
+title: Deep Into vue
 tags:
 ---
 
-
-## Components
+## VueRouter
 
 ### Link
 
@@ -198,3 +197,11 @@ tags:
     }
   }
 ```
+
+## Vuex
+### Store
+
+- `dispatch & commit` always bound to store
+- `function resetStoreVM (store, state, hot)`: responsible for the reactivity, also registers getters as computed properties
+- `module`
+- `subscribe`: register mutation callbacks (`store._subscribers`), `subscribeAction`: register action callbacks (`store._actionSubscribers`).
