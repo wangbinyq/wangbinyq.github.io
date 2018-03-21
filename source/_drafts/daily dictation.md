@@ -47,4 +47,15 @@ tags:
 ## 3-13
 26. It's a kind of thing you look forward to instead of, you known, some *workouts you dread* and you think *of* it *as* work and this is just fun.
 27. Superhero costumes as usual, are big this year, especially form recent movies like Thor and the Green Lantern. 
-28. 
+
+## 3-14 
+I need a rest!
+
+## 3-15
+28. It's a pain, *'cuz* my fridge is *I* dumped *it* today, and the food's gone.
+29. *He says he* was simply going by the *b*ook when it comes to landing without *gear*, and *that* he *and his fellow pilots* train for these type of incidents.
+30. It is the vegetable some love *to* hate! But now a new breed of broccoli super broccoli - developed in Britain may protect aganist heart disease, even some kinds of cancer.
+
+## 3-19
+31. Mayor Sam Aden ordered that the camp be shutdown saturday, *citing* unhealthy conditions and the attraction of the drug dealers and thieves.
+32. A preliminary government report predicts *it'll* take 30 years *or* more to *safely decommission the facility* and *it* could be decade's before nearby residents who were forced to flee can return to the area.
