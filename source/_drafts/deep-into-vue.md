@@ -3,6 +3,25 @@ title: Deep Into vue
 tags:
 ---
 
+## src Directory structure
+
+This is come from the `Project Structure` section of the [Vue contributing document](https://github.com/vuejs/vue/blob/dev/.github/CONTRIBUTING.md).
+
+- `compiler`: contains code for the template-to-render-function compiler.
+- `core`: contains universal, platform-agnostic runtime code.
+  - `observer`: contains code related to the reactivity system.
+  - `vdom`: contains code related to vdom element creation and patching.
+  - `instance`: contains Vue instance constructor and prototype methods.
+  - `global-api`: as the name suggests.
+  - `components`: universal abstract components. Currently `keep-alive` is the only one.
+- `server`: contains code related to server-side rendering.
+- `platforms`: contains platform-specific code.
+  - platforms build entry file
+  - `compiler`, `runtime`, `server`: corresponding to the three directories above.
+- `sfc`: contains single-file component (`*.vue` files) parsing logic.
+- `shared`: contains utilities shared across the entire codebase.
+- `types`: contains TypeScript type definitions.
+
 ## VueRouter
 
 ### Link
