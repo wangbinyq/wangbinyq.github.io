@@ -145,3 +145,11 @@ class Subscription {
   }
 }
 ```
+
+#
+
+statement or expressuin is sync and eager pull
+function is sync and lazy pull
+iterator or generator is sync and lazy and pull and multiple values
+promise is async and eager and push
+observable is async/sync lazy and push
