@@ -6,7 +6,6 @@ tags:
 ## Motivation
 The Observable type represents one of the fundamental protocols for processing asynchronous streams of data. It is particularly effective at modeling streams of data which originate from the environment and are pushed into the application, such as user interface events. By offering Observable as a component of the ECMAScript standard library, we allow platforms and applications to share a common push-based stream protocol.
 
-
 ## Observale
 
 ```js
@@ -148,8 +147,36 @@ class Subscription {
 
 #
 
-statement or expressuin is sync and eager pull
-function is sync and lazy pull
-iterator or generator is sync and lazy and pull and multiple values
-promise is async and eager and push
-observable is async/sync lazy and push
+statement or expressuin is sync, eager and pull
+function is sync, lazy and pull
+iterator or generator is sync, lazy, pull and multiple values
+promise is async, eager and push
+observable is async/sync, lazy and push
+
+subscribe an observable is just like a function calling.
+It starts executing some expression at that time.
+
+## FRP (functional reactive programming)
+
+- rxjs
+  - Observable
+  - Observer: an object with three callbacks: onNext, onComplete, onError
+  - Subject: is equivalent to an EventEmmiter, the only way to multicasting a value or event to multiple observer. Subject also is an Observer, it can subscribe to an Observable.
+  - Operators: some operater on the Observable and return an new Observable. This is like a higher order function is functional programming language.
+  - Schedulers: execution context. subscribeOn: subscribe context (default: synchronously and immediately), observeOn: notification context
+  - cold observable: every subscribe start an new executing context.
+  - hot observable: subscribe doesn't start new executing context if it is already running.
+- bacon.js
+  - the `_` of Events
+  - stream: is an Observable.
+  - EventStream: a stream of events.
+  - Property: a reactive property
+- most.js
+  - integrate with language features, promise, iterator, generator, asynchronous generator.
+  - stream: sequence of events that occur over time. are asynchronous and may be infinite.
+  - source: represents a view of events over time.
+  - sink: observer
+- xstream
+  - stream: event emmiter
+  - listener: next, error, complete
+  - producer: like cold observer
