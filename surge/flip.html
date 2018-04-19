@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .list {
+      width: 200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .grid {
+      width: 180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-template-rows: auto;
+    }
+
+    .item {
+      position: relative;
+      height: 20px;
+      border: 1px solid #eee;
+      margin: 5px;
+      text-align: center;
+    }
+
+    .flip {
+      transition: all 1s ease;
+    }
+  </style>
+</head>
+<body>
+  <h2>
+    List shuffle
+  </h2>
+  <div class="list">
+    <div class="item">11</div>
+    <div class="item">22</div>
+    <div class="item">33</div>
+    <div class="item">44</div>
+    <div class="item">55</div>
+  </div>
+
+  <h2>
+    Grid shuffle
+  </h2>
+  <div class="grid">
+      <div class="item">01</div>
+      <div class="item">02</div>
+      <div class="item">03</div>
+      <div class="item">04</div>
+      <div class="item">05</div>
+      <div class="item">06</div>
+      <div class="item">07</div>
+      <div class="item">08</div>
+      <div class="item">09</div>
+      <div class="item">10</div>
+      <div class="item">11</div>
+      <div class="item">12</div>
+  </div>
+
+  <script>
+    let running = 0
+    const list = document.querySelectorAll('.list .item')
+    const grid = document.querySelectorAll('.grid .item')
+    document.querySelector('.list').addEventListener('click', function () {
+      if (running) return
+      flip(list)
+    })
+    document.querySelector('.grid').addEventListener('click', function () {
+      if (running) return
+      flip(grid)
+    })
+
+    function first (list) {
+      return [].map.call(list, (el) => el.getBoundingClientRect())
+    }
+
+    function last (list) {
+      function shuffle (list) {
+        const lst = list.slice(0)
+        const len = lst.length
+        for (let _ in lst) {
+          const i = Math.floor(Math.random() * len)
+          const j = Math.floor(Math.random() * len)
+          if (i !== j) {
+            [lst[i], lst[j]] = [lst[j], lst[i]]
+          }
+        }
+        return lst
+      }
+
+      return shuffle(list)
+    }
+
+    function invert (els, first, last) {
+      const diff = first.map((f, i) => {
+        return {
+          top: f.top - last[i].top,
+          left: f.left - last[i].left
+        }
+      })
+      console.log('--- invert ---')
+      els.forEach((el, i) => {
+        const lastTop = parseInt(el.style.top) || 0
+        const lastLeft = parseInt(el.style.left) || 0
+        el.style.top = `${lastTop - diff[i].top}px`
+        el.style.left = `${lastLeft - diff[i].left}px`
+        console.log(first[i], last[i], diff[i])
+        el.style.transform = `translate(${diff[i].left}px, ${diff[i].top}px)`
+      })
+    }
+
+    function play (els) {
+      requestAnimationFrame(() => {
+        els.forEach((el) => {
+          el.classList.add('flip')
+          running++
+        })
+        requestAnimationFrame(() => {
+          els.forEach((el) => {
+            el.style.transform = ''
+            el.addEventListener('transitionend', function onEnd() {
+              el.removeEventListener('transitionend', onEnd)
+              el.classList.remove('flip')
+              running--
+            })
+          })
+        })
+      })
+    }
+
+    function flip (els) {
+      const f = first(els)
+      const l = last(f)
+      invert(els, f, l)
+      play(els)
+    }
+
+  </script>
+</body>
+</html>
