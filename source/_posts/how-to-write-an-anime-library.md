@@ -5,6 +5,7 @@ tags:
 ---
 ## The engine
 We need a mechanism to deal with [layout thrashing](https://github.com/wangbinyq/writings/wiki/Html-Reflow-and-Layout-Thrashing). So we have an engine that group all animations into to a `requestAnimationFrame` callback.
+<!-- more -->
 
 ```js
 const engine = (function () {
