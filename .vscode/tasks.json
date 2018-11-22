@@ -12,7 +12,7 @@
       ]
     },
     {
-      "label": "hexx  deploy",
+      "label": "hexo deploy",
       "type": "shell",
       "command": "hexo",
       "args": [
