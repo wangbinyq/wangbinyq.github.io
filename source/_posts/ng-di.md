@@ -7,7 +7,7 @@ tags:
   di
 date: 2018-11-22 16:54:00
 ---
-`Angular` 程序开发中 `Provider` 和依赖注入是两个非常重要的概念, 关系到我们如何编写程序. 本文将解释 `@Inject()`, `@Injectable()` 两个装饰器背后的原理和它们的使用场景, 以及 `Angular` 依赖注入框架中的 `token`, `provider` 和 `Angular` 是如何创建依赖的. 最后会有一些 AOT 源码的解释.
+`Angular` 程序开发中 `Provider` 和依赖注入是两个非常重要的概念, 关系到我们如何编写程序. 本文将解释 `@Inject()`, `@Injectable()` 两个装饰器背后的原理和它们的使用场景, 以及 `Angular` 依赖注入框架中的 `token`, `provider` 和 `Angular` 是如何创建依赖的.
 <!-- more -->
 
 ## 注入 providers
@@ -158,5 +158,179 @@ class ExampleComponent {
 
 我们并不需要在所有的类上添加 `@Injectable` 装饰器, 才可以将其注入到组件或服务中. 虽然可能会发生变化, 有一个 [issue](https://github.com/angular/angular/issues/13820) 讨论需要强制加上 `@Injectable` (4.0 已经变成强制需要 `@Injectable`)
 
-当我们使用
+当我们使用装饰器时, 将被装饰的类的元信息存储成能被 `Angular` 处理的格式, 这些元信息中就包含了这个类的依赖.
 
+如果没有使用装饰器添加元信息, `Angular` 就无从得知类的依赖. 这就是我们为什么需要 `@Injectable()`. `@Injectable()` 并没有其他的功能, 仅仅是提供了一些元信息.
+
+## Token 和依赖注入
+
+现在我们知道了如何告诉 `Angular` 需要注入的内容, 现在我们来学习 `Angular` 如何知道从哪获取依赖以及如何实例化他们.
+
+### 注册 provide
+
+我们先来看如何注册一个服务到一个 `NgModule` 上.
+
+```ts
+import { NgModule } from '@angular/core';
+
+import { AuthService } from './auth.service';
+
+@NgModule({
+  providers: [AuthService],
+})
+class ExampleModule {}
+```
+
+上面例子是下面的简化版:
+
+```ts
+import { NgModule } from '@angular/core';
+
+import { AuthService } from './auth.service';
+
+@NgModule({
+  providers: [{
+    provide: AuthService,
+    useClass: AuthService
+  }],
+})
+class ExampleModule {}
+```
+
+其中 `provide` 字段表示我们注册的 provider 的 `token`. 当 `Angular` 看到 `AuthService` `token` 时, 就会取 `useClass` 的值进行实例化.
+
+这样做有很多优点. 其一, 我们可以注册多个相同 `class` 的 `provide`, 而且不会发生冲突 (只要 `token` 不一样); 第二, 我们可以通过相同的 `token` 来覆盖之前的 `provide`.
+
+### 覆盖 `providers`
+
+我们的 `AuthService` 代码如下:
+
+```ts
+import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+
+@Injectable()
+export class AuthService {
+
+  constructor(private http: Http) {}
+
+  authenticateUser(username: string, password: string): Observable<boolean> {
+    // returns true or false
+    return this.http.post('/api/auth', { username, password });
+  }
+
+  getUsername(): Observable<string> {
+    return this.http.post('/api/user');
+  }
+
+}
+```
+
+假设我们的程序中使用了这个服务, 例如登录:
+
+```ts
+import { Component } from '@angular/core';
+import { AuthService } from './auth.service';
+
+@Component({
+  selector: 'auth-login',
+  template: `
+    <button (click)="login()">
+      Login
+    </button>
+  `
+})
+export class LoginComponent {
+
+  constructor(private authService: AuthService) {}
+
+  login() {
+    this.authService
+      .authenticateUser('toddmotto', 'straightouttacompton')
+      .subscribe((status: boolean) => {
+        // do something if the user has logged in
+      });
+  }
+
+}
+```
+
+显示用户名:
+
+```ts
+@Component({
+  selector: 'user-info',
+  template: `
+    <div>
+      You are {{ username }}!
+    </div>
+  `
+})
+class UserInfoComponent implements OnInit {
+
+  username: string;
+
+  constructor(private authService: AuthService) {}
+
+  ngOnInit() {
+    this.authService
+      .getUsername()
+      .subscribe((username: string) => this.username = username);
+  }
+
+}
+```
+
+我们将上面所有代码整合成一个模块, 比如 `AuthModule`:
+
+```ts
+import { NgModule } from '@angular/core';
+
+import { AuthService } from './auth.service';
+
+import { LoginComponent } from './login.component';
+import { UserInfoComponent } from './user-info.component';
+
+@NgModule({
+  declarations: [LoginComponent, UserInfoComponent],
+  providers: [AuthService],
+})
+export class AuthModule {}
+```
+
+其他的组件可能也会依赖 `AuthService`. 现在假设我们有一个新的需求, 需要修改授权方法使得用户可以通过 Facebook 登录.
+
+一种方法是修改所有的组件, 将其构造函数中的 `AuthService` 替换成新的服务. 另外我们也可以通过修改 `providers` 来将 `AuthService` 覆盖成 `FacebookAuthService`:
+
+```ts
+import { NgModule } from '@angular/core';
+
+// totally made up
+import { FacebookAuthService } from '@facebook/angular';
+
+import { AuthService } from './auth.service';
+
+import { LoginComponent } from './login.component';
+import { UserInfoComponent } from './user-info.component';
+
+@NgModule({
+  declarations: [LoginComponent, UserInfoComponent],
+  providers: [
+    {
+      provide: AuthService,
+      useClass: FacebookAuthService,
+    },
+  ],
+})
+export class AuthModule {}
+```
+
+这里我们没有采用简写方法, 并且替换了 `useClass` 的值. 这样在模块中的 `AuthService` `token` 就会使用 `FacebookAuthService` 类.
+
+## 理解注入器 (Injector)
+
+翻译略 (一些 AOT 源码的解释, 有兴趣的可以研究下).
+
+## 参考资料
+
+- [装饰器反射相关4篇](http://blog.wolksoftware.com/decorators-reflection-javascript-typescript)
