@@ -1,5 +1,5 @@
 ---
-title: Angular 依赖注入详解
+title: 理解 Angular 依赖注入
 from: https://toddmotto.com/angular-dependency-injection
 tags:
   angular
