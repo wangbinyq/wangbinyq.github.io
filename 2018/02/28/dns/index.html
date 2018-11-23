@@ -17,7 +17,7 @@
 <div class="tip"><br>授权域名服务器: 我们知道计算机要上网的话, 必须要设置 DNS (除非只用 IP), 或者 ISP 自动分配 DNS. 这个 DNS 服务器是叫做 LocalDNS, 提供了缓存和递归查询服务. 如果查询一个域名在 LocalDNS 上已经有缓存了, LocalDNS 直接返回结果 (叫做非授权应答); 如果 LocalDNS 上没有这个域名的话, LocalDNS 就要对域名发起递归查找(类似 dig +trace 的过程), 就是从根域名 -&gt; 顶级域名 -&gt; 授权域名查找这个域名, 并将应答返回, 同时缓存应答(可以看出根域名, 顶级域名也是授权域名服务器). 一般宽带运行商和公共DNS服务提供的是 LocalDNS, 域名注册商提供的是授权DNS.<br></div>
 
 <p>假如我在阿里云上注册了一个域名 (example.com), 其 NS 记录就是 dns14.hichina.com 和 dns13.hichina.com (万网的授权域名服务器), 我们还可以设置 NS 记录指向其他的授权域名服务器.</p>
-</div></article></div></main><footer><div class="paginator"><a href="/2018/04/17/how-to-write-an-anime-library/" class="prev">PREV</a><a href="/2018/02/28/hexo-guide/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'wangb';
+</div></article></div></main><footer><div class="paginator"><a href="/2018/04/17/how-to-write-an-anime-library/" class="prev">上一篇</a><a href="/2018/02/28/hexo-guide/" class="next">下一篇</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'wangb';
 var disqus_identifier = '2018/02/28/dns/';
 var disqus_title = 'DNS 解析详解';
 var disqus_url = 'https://wangbinyq.github.io/2018/02/28/dns/';
