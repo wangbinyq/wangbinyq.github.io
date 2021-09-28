@@ -1,6 +1,8 @@
 menu:
     Blog: /
     Archive: /archives/
+    # Tags: /tags/
+    # Categories: /categories/
     GitHub: https://github.com/wangbinyq
     Rss: /atom.xml
 
