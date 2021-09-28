@@ -6,7 +6,8 @@
     "version": "5.4.0"
   },
   "scripts": {
-    "start": "hexo server"
+    "start": "hexo server",
+    "build": "hexo generate"
   },
   "dependencies": {
     "hexo": "^5.4.0",
