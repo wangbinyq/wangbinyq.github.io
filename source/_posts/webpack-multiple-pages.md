@@ -6,7 +6,7 @@ tags:
   - 多页面
 ---
 
-本文将基于 `Webpack 5` 配置出一套多页面的前端开发工作流. 适用于传统的后端模板渲染情景. 示例代码请点击[链接]().
+本文将基于 `Webpack 5` 配置出一套多页面的前端开发工作流. 适用于传统的后端模板渲染情景. 示例代码请点击[链接](https://github.com/wangbinyq/webpack-multiple-pages-example).
 
 <!-- more -->
 
